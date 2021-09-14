@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript basic</title>
+    <script>
+        //exercici 1
+        console.log("Hola mundo");
+
+        //exercici 2
+        var nom = "Alicia";
+        alert("Me llamo " + nom);
+
+        //exercici 3
+        var nom = "Alicia";
+        var cognom = "Jiménez";
+        console.log(nom + " " + cognom);
+
+        //exercici 4 
+        var num1 = 2;
+        var num2 = 5;
+        var resultado = num1 + num2;
+        console.log("La suma entre " + num1 + " y " + num2 + " es " + resultado);
+
+        //exercici 5 
+        var nota_examen = 8;
+        
+        if (nota_examen < 5){
+            alert("Ohh has suspendido el examen con un " + nota_examen);
+        } else {
+            alert("Felicidades has aprobado con un " + nota_examen);
+        }
+
+        //exercici 6 part 1
+        var frase = "Tinc un cotxe de color blau";
+        var nuevaFrase;
+        var nuevaFrase = (frase.replace("blau", "verd"));
+        console.log(nuevaFrase);
+
+        //exercici 6 part 2
+        var frase = "Tinc un cotxe de color blau";
+        var fraseConU;
+        var fraseConU = (frase.replace(/o/gi, "u"));
+        console.log(fraseConU);
+
+        //exercici 7
+        var llistat = ["taula", "cadira", "ordinador", "llibreta"];
+
+        for (i=0; i < llistat.length; i++){
+            console.log("L'objecte " + llistat[i] + " està a la posició " + [i]);
+        }
+
+        //exercici 8
+        var resultat;
+
+        function calculadora(operacio, num1, num2){
+            if(operacio === "suma"){
+                resultat = num1 + num2;
+                console.log("El resultat de la suma es " + resultat)
+            } else if (operacio === "resta"){
+                resultat = num1 - num2;
+                console.log("El resultat de la resta es " + resultat)
+            } else if (operacio === "producte"){
+                resultat = num1 * num2;
+                console.log("El resultat del producte es " + resultat)
+            } 
+
+            }
+            
+        calculadora("suma", 5, 4);
+        calculadora("resta", 23, 10);
+        calculadora("producte", 8, 2);
+
+        // NIVELL 2
+        var resultat;
+
+        function calculadora(operacio, num1, num2){
+            if(operacio === "suma"){
+                resultat = num1 + num2;
+                alert("El resultat de la suma es " + resultat)
+            } else if (operacio === "resta"){
+                resultat = num1 - num2;
+                alert("El resultat de la resta es " + resultat)
+            } else if (operacio === "producte"){
+                resultat = num1 * num2;
+                alert("El resultat del producte es " + resultat)
+            } else if (operacio === "divisio"){
+                resultat = num1 / num2;
+                if(num2 === 0){
+                    alert("Error, introduiu un numero més gran que 0.")
+                } else {
+                    alert("El resultat de la divisió es " + resultat);
+                }
+            }
+
+            }
+            
+        calculadora("suma", 5, 4);
+        calculadora("resta", 23, 10);
+        calculadora("producte", 8, 2);
+        calculadora("divisio", 8, 0);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
